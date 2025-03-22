@@ -9,30 +9,29 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="relative h-screen flex flex-col justify-center items-center text-center px-6">
-  <img 
-  src="/images/narco-banner.jpg" 
-  alt="NarcoNations Banner" 
-  className="absolute inset-0 w-full h-full object-cover"
-/>
-
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <motion.h1 
-          className="text-5xl font-bold max-w-3xl relative z-10"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Build Your Cartel. Smuggle. Dominate.
-        </motion.h1>
-        <p className="mt-4 text-lg max-w-xl relative z-10">
-          A high-stakes strategy game inspired by real-world crime networks.
-        </p>
-        <div className="mt-6 space-x-4 relative z-10">
-          <button className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded">Join the Kickstarter</button>
-          <button className="border px-4 py-2 rounded">Play the Free Demo</button>
-        </div>
-      </section>
+     <section className="relative w-full h-[80vh]">
+  <img
+    src="/images/narco-banner.jpg"
+    alt="NarcoNations Banner"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+  <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center px-6">
+    <h1 className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg">
+      Build Your Cartel. Smuggle. Dominate.
+    </h1>
+    <p className="mt-4 text-lg max-w-2xl text-gray-200">
+      A high-stakes strategy game inspired by real-world crime networks.
+    </p>
+    <div className="mt-6 space-x-4">
+      <button className="bg-red-600 hover:bg-red-700 px-6 py-3 rounded text-white font-semibold">
+        Join the Kickstarter
+      </button>
+      <button className="border border-white px-6 py-3 rounded text-white font-semibold">
+        Play the Free Demo
+      </button>
+    </div>
+  </div>
+</section>
 
       {/* Game Overview */}
       <section className="py-20 px-6 text-center bg-gray-900">
