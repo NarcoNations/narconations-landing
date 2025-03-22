@@ -10,11 +10,11 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <section className="relative h-screen flex flex-col justify-center items-center text-center px-6">
-        <img 
-          src="https://via.placeholder.com/1200x600" 
-          alt="NarcoNations Banner" 
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+      <img 
+  src="/images/narco-banner.jpg" 
+  alt="NarcoNations Banner" 
+  className="absolute inset-0 w-full h-full object-cover"
+/>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <motion.h1 
           className="text-5xl font-bold max-w-3xl relative z-10"
