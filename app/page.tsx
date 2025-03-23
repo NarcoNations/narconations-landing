@@ -18,6 +18,7 @@ export default function Home() {
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
+            backgroundColor: "rgba(0, 0, 0, 0.9)", // Fallback if image fails
           }}
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -69,10 +70,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Game Overview Section with Subtle Animation */}
+      {/* Game Overview Section with CSS-based Grunge Texture */}
       <section className="py-20 px-6 bg-gray-900 relative overflow-hidden">
-        {/* Background Texture */}
-        <div className="absolute inset-0 bg-[url('/images/grunge-texture.jpg')] opacity-10" />
+        {/* CSS-based Grunge Texture */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"%3E%3Cfilter id=\"noise\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"4\" stitchTiles=\"stitch\"/%3E%3C/filter%3E%3Crect width=\"100%25\" height=\"100%25\" filter=\"url(%23noise)\"/%3E%3C/svg%3E')",
+            backgroundBlendMode: "overlay",
+            filter: "contrast(150%) brightness(80%)",
+          }}
+        />
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-red-500 drop-shadow-lg"
